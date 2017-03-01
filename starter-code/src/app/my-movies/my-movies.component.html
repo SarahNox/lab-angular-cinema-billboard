@@ -1,0 +1,24 @@
+<ul>
+  <h3>Movie Description:</h3>
+  <li>{{movie.title}}</li>
+  <li>Synopsis: {{movie.synopsis}}</li>
+  <li>Year: {{movie.year}}</li>
+  <li>Director: {{movie.director}}</li>
+  <li>Main Actors:
+    <ul>
+      <li *ngFor="let actor of movie.actors">{{actor}}</li>
+    </ul>
+  </li>
+  <img class="image" src="{{movie.poster}}">
+</ul>
+<hr>
+<ul>
+  <h3>Screening:</h3>
+  <li>Room: {{movie.rooms}}</li>
+  <li>Hours:
+    <ul>
+      <li *ngFor="let hour of movie.hours">{{hour}}</li>
+    </ul>
+  </li>
+</ul>
+<a href="/home">Back</a>
